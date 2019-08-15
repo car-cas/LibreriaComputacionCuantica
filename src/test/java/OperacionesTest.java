@@ -22,6 +22,7 @@ import static org.junit.Assert.*;
 public class OperacionesTest {
     
     public OperacionesTest() {
+        
     }
     
     @Test

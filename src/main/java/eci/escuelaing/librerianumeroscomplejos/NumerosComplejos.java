@@ -19,6 +19,7 @@ public class NumerosComplejos {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        /**
         Operaciones operacion = new Operaciones();
         Complejo a = new Complejo(4,3);
         Complejo b = new Complejo(5,-7);
@@ -31,6 +32,7 @@ public class NumerosComplejos {
         System.out.println("Polar a cartesino : " + operacion.PolarACartesiano(x));
         System.out.println("Modulo : " + operacion.modulo(a)); 
         System.out.println("Fase : " + operacion.fase(a));
+        **/
     }
     
 }
