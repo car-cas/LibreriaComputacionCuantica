@@ -1,12 +1,10 @@
 Librería computación Cuántica: Números complejos
 ======
-Nombre: 
 
-* Carlos Andrés Castañeda Lozano
+### El programa libreria de computación cúantica cuenta con los siguientes operaciones:
 
-Operaciones entre numeros complejos:
+#### Suma
 
-* Suma
 * Producto
 * Resta
 * División
