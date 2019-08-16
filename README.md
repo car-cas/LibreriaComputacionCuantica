@@ -1,3 +1,5 @@
+Realizado por Carlos Andrés Castañeda Lozano
+
 # Librería computación Cuántica: Números complejos
 
 Esta librería de computacion Cuántica podemos encontrear operaciones entre numeros complejos, los cuales tambien
