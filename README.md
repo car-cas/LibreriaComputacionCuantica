@@ -2,7 +2,7 @@ Realizado por Carlos Andrés Castañeda Lozano
 
 # Librería computación Cuántica: Números complejos
 
-Esta librería de computacion Cuántica podemos encontrear operaciones entre numeros complejos, los cuales tambien
+Esta librería de computacion Cuántica podemos encontrar operaciones entre numeros complejos, los cuales tambien
 se pueden extender en operaciones entre vectores y matrices.
 
 # Operaciones 
