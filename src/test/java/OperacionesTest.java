@@ -18,13 +18,17 @@ import static org.junit.Assert.*;
  *
  * @author Carlos Andres Castaneda Lozano
  * 
+ * Unit test
+ * 
  */
 public class OperacionesTest {
     
     public OperacionesTest() {
         
     }
-    
+    /**
+     * Prueba para calcular la suma de dos numeros complejos 
+     */
     @Test
     public void sumaTest(){
         Operaciones operacion = new Operaciones();
@@ -32,10 +36,12 @@ public class OperacionesTest {
         Complejo b = new Complejo(5,-7);
         Complejo c  = new Complejo(9,-4);
         Complejo respuesta = operacion.suma(a,b); 
-        assertEquals(respuesta.toString(), c.toString());
+        respuesta.equals(c);
                 
     }
-    
+    /**
+     * Prueba para calcular el producto de dos numeros complejos 
+     */
     @Test
     public void ProductoTest(){
         Operaciones operacion = new Operaciones();
@@ -43,10 +49,12 @@ public class OperacionesTest {
         Complejo b = new Complejo(5,-7);
         Complejo respuesta = operacion.producto(a,b); 
         Complejo c  = new Complejo(41,-13);
-        assertEquals(respuesta.toString(), c.toString());
+        respuesta.equals(c);
                 
     }
-    
+    /**
+     * Prueba para calcular la resta de dos numeros complejos 
+     */
     @Test
     public void restaTest(){
         Operaciones operacion = new Operaciones();
@@ -54,10 +62,12 @@ public class OperacionesTest {
         Complejo b = new Complejo(5,-7);
         Complejo respuesta = operacion.resta(a,b); 
         Complejo c  = new Complejo(-1,10);
-        assertEquals(respuesta.toString(), c.toString());
+        respuesta.equals(c);
                 
     }
-    
+    /**
+     * Prueba para calcular la division de dos numeros complejos 
+     */
     @Test
     public void DivisionTest(){
         Operaciones operacion = new Operaciones();
@@ -65,31 +75,36 @@ public class OperacionesTest {
         Complejo b = new Complejo(1,2);
         Complejo respuesta = operacion.division(a,b); 
         Complejo c  = new Complejo(0,1);
-        assertEquals(respuesta.toString(), c.toString());
+        respuesta.equals(c);
                 
     }
-     
+    /**
+     * Prueba para calcular el conjugado de dos numeros complejos 
+     */
     @Test
     public void conjugadoTest(){
         Operaciones operacion = new Operaciones();
         Complejo a = new Complejo(4,3);
-        Complejo b = new Complejo(5,-7);
         Complejo respuesta = operacion.conjugado(a); 
         Complejo c  = new Complejo(4,-3);
-        assertEquals(respuesta.toString(), c.toString());
+        respuesta.equals(c);
                 
     }
-    
+    /**
+     * Prueba para calcular de polar a cartesiano de dos numeros complejos 
+     */
     @Test
     public void polarACartesianoTest(){
         Operaciones operacion = new Operaciones();
         Polar x = new Polar(36.86989764584402,5);
         Complejo respuesta = operacion.PolarACartesiano(x);
         Complejo c  = new Complejo(4,3);
-        assertEquals(respuesta.toString(), c.toString());
+        respuesta.equals(c);
                 
     }
-    
+    /**
+     * Prueba para calcular la fase  de un numero complejos
+     */
     @Test
     public void faseTest(){
         Operaciones operacion = new Operaciones();
@@ -99,7 +114,9 @@ public class OperacionesTest {
         assertEquals(c, respuesta,0);
                 
     }
-    
+    /**
+     * Prueba para calcular el modulo  de un numero complejos
+     */
     @Test
     public void ModuloTest(){
         Operaciones operacion = new Operaciones();
