@@ -38,4 +38,4 @@ La operación "**polarACartesiano**" recibe una tuplas, un modulo y una fase o a
 La operación "**fase**" recibe una tuplas de numeros complejos y calcula su fase o angulo.
 
 # License
-This project is under the Apache license - see [LICENSE](https://github.com/car-cas/LibreriaComputacionCuantica/blod/master/LICENSE.txt) for more details.
+This project is under the Apache license - see [LICENSE](https://github.com/car-cas/LibreriaComputacionCuantica/LICENSE.txt) for more details.
