@@ -36,3 +36,6 @@ La operación "**polarACartesiano**" recibe una tuplas, un modulo y una fase o a
 ## 8. Retornar la fase de un número complejo
 
 La operación "**fase**" recibe una tuplas de numeros complejos y calcula su fase o angulo.
+
+# License
+This project is under the Apache license - see [LICENSE](https://github.com/car-cas/LibreriaComputacionCuantica/blod/master/LICENSE.txt) for more details.
