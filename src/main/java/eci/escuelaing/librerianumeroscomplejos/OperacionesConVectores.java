@@ -29,11 +29,11 @@ public class OperacionesConVectores {
      * @return Complejo 
      */
     public Complejo[] adicion (Complejo[] j,Complejo[] k){
-        Complejo[] resultado = new Complejo[j.length];
-        for (int i = 0; i < resultado.length; i++){
-            resultado[i] = operacion.suma(j[i], k[i]);
+        Complejo[] respuesta = new Complejo[j.length];
+        for (int i = 0; i < respuesta.length; i++){
+            respuesta[i] = operacion.suma(j[i], k[i]);
         }
-        return resultado;
+        return respuesta;
     }
     /**
      * 
@@ -43,26 +43,26 @@ public class OperacionesConVectores {
      * @return Complejo 
      */
     public Complejo[] inversa(Complejo[] j){
-        Complejo [] resultado = new Complejo[j.length];
+        Complejo [] respuesta = new Complejo[j.length];
         for (int i = 0; i < j.length; i++){
-            resultado[i] = new Complejo(j[i].getNumeroA()*-1,j[i].getNumeroB()*-1);
+            respuesta[i] = new Complejo(j[i].getNumeroA()*-1,j[i].getNumeroB()*-1);
         }
-        return resultado;
+        return respuesta;
     }
     /**
      * 
      * Metodo MultiplicacionEscalar, calcula la multipliacion escalar 
-     * de un vector de numeros complejos y numero complejo
+     * por un vector de numeros complejos y numero complejo
      * 
      * @param j Complejo[]
      * @param x Complejo
      * @return Complejo 
      */
     public Complejo[] MultiplicacionEscalar (Complejo[] j,Complejo x){
-        Complejo[] resultado = new Complejo[j.length];
-        for (int i = 0; i < resultado.length; i++){
-           resultado[i] = new Complejo(x.getNumeroA()*j[i].getNumeroA(),x.getNumeroB()*j[i].getNumeroB());
+        Complejo[] respuesta = new Complejo[j.length];
+        for (int i = 0; i < respuesta.length; i++){
+           respuesta[i] = new Complejo(x.getNumeroA()*j[i].getNumeroA(),x.getNumeroB()*j[i].getNumeroB());
         }
-        return resultado;
+        return respuesta;
     } 
 }
