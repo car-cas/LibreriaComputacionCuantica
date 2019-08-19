@@ -42,6 +42,8 @@ La operación "**fase**" recibe una tuplas de numeros complejos y calcula su fas
 # Pruebas unitarias 
 
 * Se crearon 8 pruebas las cuales corresponden a cada uno de las operaciones de numeros complejos, estas pruebas se encuentras en la case **OperacionesTest**.
+
+* Ejemplo:
 ```
 @Test
     public void sumaTest(){
