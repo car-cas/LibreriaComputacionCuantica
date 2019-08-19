@@ -47,7 +47,22 @@ La operación "**fase**" recibe una tuplas de numeros complejos y calcula su fas
 
 ## Captura 
 
+**Compiling**
 
+```
+$ mvn clean compile
+```
+**Packing**
+
+```
+$ mvn package
+```
+
+![](src/site/resources/Cmd.png)
+
+**Test Result**
+
+![](src/site/resources/Passed.png)
 
 # Operaciones con vectores y matrices 
 
