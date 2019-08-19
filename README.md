@@ -42,27 +42,47 @@ La operación "**fase**" recibe una tuplas de numeros complejos y calcula su fas
 # Pruebas unitarias 
 
 * Se crearon 8 pruebas las cuales corresponden a cada uno de las operaciones de numeros complejos, estas pruebas se encuentras en la case **OperacionesTest**.
-* Para cada una de las pruebas se implementó JUnit y Maven.
-* Se creó un metodo "**equals**" la cual verifica si los resultados de las pruebas corresponden al resultado esperado.
+```
+@Test
+    public void sumaTest(){
+        
+        Operaciones operacion = new Operaciones();
+        Complejo a = new Complejo(4,3);
+        Complejo b = new Complejo(5,-7);
+        Complejo c  = new Complejo(9,-4);
+        Complejo respuesta = operacion.suma(a,b); 
+        boolean x = operacion.equals(respuesta, c);
+        assertEquals(x,flag);
+                
+    }
+```
 
-## Captura 
+* Para cada una de las pruebas se implementó JUnit y Maven.
+* Se creó un metodo "**equals**" la cual verifica si los resultados de las pruebas corresponden al resultado esperado
+```
+public boolean equals(Complejo x, Complejo y){
+        if(x.getNumeroA()==y.getNumeroA() && x.getNumeroB()==y.getNumeroB()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+```
+## Ejecución de las pruebas 
 
 **Compiling**
-
 ```
 $ mvn clean compile
 ```
 **Packing**
-
 ```
 $ mvn package
 ```
-
+**Running the tests**
+```
+$ mvn test
+```
 ![](src/site/resources/Cmd.png)
-
-**Test Result**
-
-![](src/site/resources/Passed.png)
 
 # Operaciones con vectores y matrices 
 
