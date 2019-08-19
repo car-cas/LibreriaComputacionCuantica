@@ -39,5 +39,17 @@ La operación "**polarACartesiano**" recibe una tuplas, un modulo y una fase o a
 
 La operación "**fase**" recibe una tuplas de numeros complejos y calcula su fase o angulo.
 
+# Pruebas unitarias 
+
+* Se crearon 8 pruebas las cuales corresponden a cada uno de las operaciones de numeros complejos, estas pruebas se encuentras en la case **OperacionesTest**.
+* Para cada una de las pruebas se implementó JUnit y Maven.
+* Se creó un metodo "**equals**" la cual verifica si los resultados de las pruebas corresponden al resultado esperado.
+
+## Captura 
+
+
+
+# Operaciones con vectores y matrices 
+
 # License
 This project is under the Apache license - see [LICENSE](LICENSE.txt) for more details.
