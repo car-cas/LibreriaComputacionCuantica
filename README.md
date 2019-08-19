@@ -88,21 +88,21 @@ $ mvn test
 
 # Operaciones con vectores y matrices 
 
-## 1. Adición de vectores complejos.
-## 2. Inversa de vectores complejos.
-## 3. Multiplicación escalar de vectores complejos.
-## 4. Adición de matrices complejos.
-## 5. Inversa de matrices complejos.
-## 6. Multiplicación escalar de matrices complejas.
+## 1. Adición de vectores complejos
+## 2. Inversa de vectores complejos
+## 3. Multiplicación escalar de vectores complejos
+## 4. Adición de matrices complejos
+## 5. Inversa de matrices complejos
+## 6. Multiplicación escalar de matrices complejas
 ## 7. Matriz transpuesta
 ## 8. Matriz conjugada
 ## 9. Matriz adjunta
-## 10. Función para calcular la "acción" de una matriz sobre un vector.
+## 10. Función para calcular la "acción" de una matriz sobre un vector
 ## 11. Norma de matrices
 ## 12. Distancia entrematrices
 ## 13. Revisar si es unitaria
 ## 14. Revisar si es Hermitian
-## 15. Producto tensor.
+## 15. Producto tensor
 
 # License
 This project is under the Apache license - see [LICENSE](LICENSE.txt) for more details.
