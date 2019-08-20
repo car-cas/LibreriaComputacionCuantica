@@ -132,13 +132,4 @@ public class Operaciones {
         double angulo = Math.toDegrees(rads);
         return angulo;
     }
-    
-    public boolean equals(Complejo x, Complejo y){
-        if(x.getNumeroA()==y.getNumeroA() && x.getNumeroB()==y.getNumeroB()){
-            return true;
-        }else{
-            return false;
-        }
-    }
-   
 }

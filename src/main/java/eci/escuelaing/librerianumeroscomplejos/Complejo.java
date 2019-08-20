@@ -36,9 +36,14 @@ public class Complejo {
         return numeroA + " " + simbolo + " " + numeroB + 'i';
     }
     
+
     @Override
-    public boolean equals(Object obj) { 
-        return (this == obj);
+    public boolean equals(Object obj) {
+    	if (this == obj) return true;
+    	if (this.getClass() != obj.getClass()) return false;
+    	Complejo number = (Complejo) obj;
+    	return this.numeroA == number.getNumeroA() && this.numeroB == number.getNumeroB();
     }
+    
     
 }

@@ -22,7 +22,6 @@ import static org.junit.Assert.*;
  * 
  */
 public class OperacionesTest {
-    private boolean flag = true;
     public OperacionesTest() {
         
     }
@@ -37,8 +36,7 @@ public class OperacionesTest {
         Complejo b = new Complejo(5,-7);
         Complejo c  = new Complejo(9,-4);
         Complejo respuesta = operacion.suma(a,b); 
-        boolean x = operacion.equals(respuesta, c);
-        assertEquals(x,flag);
+        assertEquals(respuesta,c);
                 
     }
     /**
@@ -51,8 +49,7 @@ public class OperacionesTest {
         Complejo b = new Complejo(5,-7);
         Complejo respuesta = operacion.producto(a,b); 
         Complejo c  = new Complejo(41,-13);
-        boolean x = operacion.equals(respuesta, c);
-        assertEquals(x,flag);
+        assertEquals(respuesta,c);
                 
     }
     /**
@@ -65,8 +62,7 @@ public class OperacionesTest {
         Complejo b = new Complejo(5,-7);
         Complejo respuesta = operacion.resta(a,b); 
         Complejo c  = new Complejo(-1,10);
-        boolean x = operacion.equals(respuesta, c);
-        assertEquals(x,flag);
+        assertEquals(respuesta,c);
                 
     }
     /**
@@ -79,8 +75,7 @@ public class OperacionesTest {
         Complejo b = new Complejo(1,2);
         Complejo respuesta = operacion.division(a,b); 
         Complejo c  = new Complejo(0,1);
-        boolean x = operacion.equals(respuesta, c);
-        assertEquals(x,flag);
+        assertEquals(respuesta,c);
                 
     }
     /**
@@ -92,8 +87,7 @@ public class OperacionesTest {
         Complejo a = new Complejo(4,3);
         Complejo respuesta = operacion.conjugado(a); 
         Complejo c  = new Complejo(4,-3);
-        boolean x = operacion.equals(respuesta, c);
-        assertEquals(x,flag);
+        assertEquals(c,respuesta);
                 
     }
     /**
@@ -105,8 +99,7 @@ public class OperacionesTest {
         Polar x = new Polar(36.86989764584402,5);
         Complejo respuesta = operacion.PolarACartesiano(x);
         Complejo c  = new Complejo(4,3);
-        boolean y = operacion.equals(respuesta, c);
-        assertEquals(y,flag);
+        assertEquals(c,respuesta);
                 
     }
     /**
