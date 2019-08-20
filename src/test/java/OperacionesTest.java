@@ -22,9 +22,7 @@ import static org.junit.Assert.*;
  * 
  */
 public class OperacionesTest {
-    public OperacionesTest() {
-        
-    }
+
     /**
      * Prueba para calcular la suma de dos numeros complejos 
      */
