@@ -5,6 +5,8 @@
  */
 package eci.escuelaing.librerianumeroscomplejos;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Carlos Andres Castaneda Lozano
@@ -13,7 +15,7 @@ package eci.escuelaing.librerianumeroscomplejos;
  * para calcular vectores con numeros complejos
  */
 
-public class OperacionesConVectores {
+public class OperacionesConVectores extends ArrayList<Complejo> {
     private Operaciones operacion;
     
     public OperacionesConVectores(){
@@ -69,6 +71,8 @@ public class OperacionesConVectores {
     @Override
     public boolean equals(Object obj) {
     	if (this == obj) return true;
-        return false;
+    	if (this.getClass() != obj.getClass()) return false;
+    	Complejo vector = (Complejo) obj;
+    	return true;
     }
 }
