@@ -45,7 +45,7 @@ La operación "**fase**" recibe una tuplas de numeros complejos y calcula su fas
 
 * Ejemplo:
 ```
-@Test
+    @Test
     public void sumaTest(){
         
         Operaciones operacion = new Operaciones();
@@ -62,12 +62,14 @@ La operación "**fase**" recibe una tuplas de numeros complejos y calcula su fas
 * Para cada una de las pruebas se implementó JUnit y Maven.
 * Se creó un metodo "**equals**" la cual verifica si los resultados de las pruebas corresponden al resultado esperado
 ```
-public boolean equals(Complejo x, Complejo y){
-        if(x.getNumeroA()==y.getNumeroA() && x.getNumeroB()==y.getNumeroB()){
-            return true;
-        }else{
-            return false;
-        }
+    @Override
+    public boolean equals(Object obj) {
+    
+    	if (this == obj) return true;
+    	if (this.getClass() != obj.getClass()) return false;
+    	Complejo number = (Complejo) obj;
+    	return this.numeroA == number.getNumeroA() && this.numeroB == number.getNumeroB();
+        
     }
 ```
 ## Ejecución de las pruebas 
@@ -89,14 +91,41 @@ $ mvn test
 # Operaciones con vectores y matrices 
 
 ## 1. Adición de vectores complejos
+
+La operación "**adicion**" calcula la suma de dos vectores complejos.
+
 ## 2. Inversa de vectores complejos
+
+La operación "**inversa**" calcula la inversa de un vector de numeros complejos.
+
 ## 3. Multiplicación escalar de vectores complejos
+
+La operación "**inversa**" calcula la multipliacion escalar por un vector de numeros complejos y numero complejo.
+
 ## 4. Adición de matrices complejos
+
+La operación "**adicionDeMatrices**" calcula la suma de dos matrices de numeros complejos.
+
 ## 5. Inversa de matrices complejos
+
+La operación "**inversaDeMatriz**" calcula la inversa de una matriz de numeros complejos.
+
 ## 6. Multiplicación escalar de matrices complejas
+
+La operación "**multiplicacionEscalarPorMatriz**" calcula la multipliacion escalar por una matriz de numeros complejos y numero complejo.
+
 ## 7. Matriz transpuesta
+
+La operación "**matrizTranspuesta**" calcula la transpuesta de una matriz de numeros complejos.
+
 ## 8. Matriz conjugada
+
+La operación "**matrizConjugada**" calcula la conjugacion de una matriz.
+
 ## 9. Matriz adjunta
+
+La operación "**matrizAdjunta**" calcula la matriz adjunta de una matriz de numeros complejos.
+
 ## 10. Función para calcular la "acción" de una matriz sobre un vector
 ## 11. Norma de matrices
 ## 12. Distancia entrematrices
