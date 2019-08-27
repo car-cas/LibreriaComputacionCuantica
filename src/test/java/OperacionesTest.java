@@ -122,7 +122,18 @@ public class OperacionesTest {
         Complejo b = new Complejo(5,-7);
         double  respuesta = operacion.modulo(a); 
         double c  = 5;
-        assertEquals(c, respuesta,0);
+        assertEquals(c, respuesta,0);         
+    }
+    @Test
+    public void sumaiTest(){
+        
+        Operaciones operacion = new Operaciones();
+        Complejo a = new Complejo(0,1);
+        Complejo b = new Complejo(0,1);
+        Complejo c  = new Complejo(-1,0);
+        Complejo respuesta = operacion.producto(a,b); 
+        assertEquals(respuesta,c);
                 
     }
+
 }
