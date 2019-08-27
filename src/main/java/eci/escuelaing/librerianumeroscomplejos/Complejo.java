@@ -45,5 +45,13 @@ public class Complejo {
     	return this.numeroA == number.getNumeroA() && this.numeroB == number.getNumeroB();
     }
     
+    @Override
+    public int hashCode(){
+        int hash=3;
+        hash = 57 * hash + (int) (Double.doubleToLongBits(this.numeroA) ^ (Double.doubleToLongBits(this.numeroA) >>> 32));
+        hash = 57 * hash + (int) (Double.doubleToLongBits(this.numeroB) ^ (Double.doubleToLongBits(this.numeroB) >>> 32));
+        return hash;
+    }
+    
     
 }
