@@ -17,9 +17,15 @@ import java.util.ArrayList;
 
 public class OperacionesConVectores extends ArrayList<Complejo> {
     private Operaciones operacion;
+    private Complejo[] vector;
     
     public OperacionesConVectores(){
+        this.vector=vector;
         operacion = new Operaciones();
+    }
+    
+    public Complejo[] getVector() {
+        return vector;
     }
     
     /**
@@ -72,7 +78,20 @@ public class OperacionesConVectores extends ArrayList<Complejo> {
     public boolean equals(Object obj) {
     	if (this == obj) return true;
     	if (this.getClass() != obj.getClass()) return false;
-    	Complejo vector = (Complejo) obj;
-    	return true;
+    	OperacionesConVectores vector = (OperacionesConVectores) obj;
+        if(vector.getVector().length!=vector.size()){
+            return false;
+        }
+        boolean b = false;
+        for (int i = 0; i < vector.size(); i++) {
+            if(!vector.getVector()[i].equals(vector.get(i))){
+                b = false;
+                break;
+            }else{
+                b = true;
+            }
+        }
+    	return b;
     }
 }
+    

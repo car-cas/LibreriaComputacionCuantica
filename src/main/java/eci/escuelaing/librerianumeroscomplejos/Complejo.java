@@ -9,6 +9,9 @@ package eci.escuelaing.librerianumeroscomplejos;
  *
  * @author Carlos Andres Castaneda Lozano
  * 
+ * Clase Complejo, crea un numero complejo que consta de un numero
+ * real y un numero imaginario.
+ * 
  */
 public class Complejo {
     private double numeroA;
@@ -18,7 +21,7 @@ public class Complejo {
         this.numeroA = numeroA;
         this.numeroB = numeroB;
     }
-    
+ 
     public double getNumeroA(){
         return numeroA;
     }
