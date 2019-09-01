@@ -124,8 +124,9 @@ public class OperacionesConMatrices {
         return respuesta;
     }
     
+    
     /**
-     * Metodo normaMatrices, calcula la norma de una matriz
+     * Metodo normaMatrices, calcula la norma de una matriz de numeros reales.
      * 
      * @param matriz double[][]
      * @return double 
@@ -154,7 +155,43 @@ public class OperacionesConMatrices {
 	}
 	return Math.sqrt(trace);
     }
-    
-    
+    /**
+     * Metodo distanciaEntreMatrices, calcula la distancia de dos matrices de
+     * reales
+     * 
+     * @param m1 double[]
+     * @param m2 double[]
+     * @return double 
+     */
+    public double distanciaEntreMatrices(double[][] m1, double[][] m2){
+        double ms[][] = new double[m1.length][m1[0].length];
+	for (int i = 0; i < ms.length; i++) {
+            for (int j = 0; j < ms[0].length; j++) {
+		ms[i][j] = m1[i][j] - m2[i][j];
+            }
+	}
+	double[][] mt = new double[ms.length][ms[0].length];
+	for (int i = 0;i < mt.length;i++) {
+            for (int j = 0;j < mt.length;j++) {
+                mt[i][j] = ms[j][i];
+            }
+	}
+	double[][] r = new double[mt.length][mt[0].length];
+	double s = 0;
+	for (int i = 0; i < mt.length; i++) {
+            for (int j = 0; j < mt[0].length; j++) {
+		for (int k = 0; k < mt.length; k++) {
+                    s = s + (mt[i][k] * ms[i][j]);
+		}
+		r[i][j] = s;
+		s = 0;
+            }
+	}
+	double trace = 0;
+	for (int i = 0; i < r.length; i++) {
+            trace = trace + r[i][i];
+	}
+	return Math.sqrt(trace);
+    }
        
 }
