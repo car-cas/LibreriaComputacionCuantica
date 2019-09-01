@@ -15,9 +15,13 @@ package eci.escuelaing.librerianumeroscomplejos;
  */
 public class OperacionesConMatrices {
     private Operaciones operacion;
-    
+    private Complejo[][] matriz;
+     
     public OperacionesConMatrices(){
         operacion = new Operaciones();
+    }   
+    public Complejo[][] getMatriz(){
+        return matriz;
     }
     /**
      * 
@@ -120,6 +124,37 @@ public class OperacionesConMatrices {
         return respuesta;
     }
     
+    /**
+     * Metodo normaMatrices, calcula la norma de una matriz
+     * 
+     * @param matriz double[][]
+     * @return double 
+     */
+    public double normaMatrices(double[][] matriz){
+	double[][] mt = new double[matriz.length][matriz[0].length];
+	for (int i = 0;i < mt.length;i++) {
+		for (int j = 0;j < mt.length;j++) {
+                    mt[i][j] = matriz[j][i];
+		}
+	}
+	double[][] r = new double[matriz.length][matriz[0].length];
+	double s = 0;
+	for (int i = 0; i < mt.length; i++) {
+		for (int j = 0; j < mt[0].length; j++) {
+			for (int k = 0; k < mt.length; k++) {
+				s = s + (mt[i][k] * matriz[i][j]);
+			}
+			r[i][j] = s;
+			s = 0;
+		}
+	}
+	double trace = 0;
+	for (int i = 0; i < r.length; i++) {
+		trace = trace + r[i][i];
+	}
+	return Math.sqrt(trace);
+    }
     
     
+       
 }
