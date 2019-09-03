@@ -5,6 +5,7 @@
  */
 import eci.escuelaing.librerianumeroscomplejos.Complejo;
 import eci.escuelaing.librerianumeroscomplejos.OperacionesConMatrices;
+import org.junit.Assert;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
@@ -37,7 +38,7 @@ public class OperacionesConMatricesTest {
         res[1][0] = new Complejo(2,2);
         res[1][1] = new Complejo(2,2);
         Complejo[][] respuesta = operacion.adicionDeMatrices(lista, listaDos) ;
-        assertEquals(respuesta,res);
+        Assert.assertArrayEquals(respuesta,res);
     }
     
     @Test
@@ -54,7 +55,7 @@ public class OperacionesConMatricesTest {
         res[1][0] = new Complejo(-1,-1);
         res[1][1] = new Complejo(-1,-1);
         Complejo[][] respuesta = operacion.inversaDeMatriz(lista) ;
-        assertEquals(respuesta,res);
+        Assert.assertArrayEquals(respuesta,res);
     }
     
     @Test
@@ -72,7 +73,7 @@ public class OperacionesConMatricesTest {
         res[1][1] = new Complejo(0,4);
         Complejo nc= new Complejo(2,2);
         Complejo[][] respuesta = operacion.multiplicacionEscalarPorMatriz(lista, nc) ;
-        assertEquals(respuesta,res);
+        Assert.assertArrayEquals(respuesta,res);
     }
     
     @Test
@@ -89,7 +90,7 @@ public class OperacionesConMatricesTest {
         res[1][0] = new Complejo(1,0);
         res[1][1] = new Complejo(1,0);
         Complejo[][] respuesta = operacion.matrizTranspuesta(lista) ;
-        assertEquals(respuesta,res);
+        Assert.assertArrayEquals(respuesta,res);
     }
     
     @Test
@@ -106,7 +107,7 @@ public class OperacionesConMatricesTest {
         res[1][0] = new Complejo(1,-1);
         res[1][1] = new Complejo(1,-1);
         Complejo[][] respuesta = operacion.matrizConjugada(lista) ;
-        assertEquals(respuesta,res);
+        Assert.assertArrayEquals(respuesta,res);
     }
      
     @Test
@@ -123,7 +124,7 @@ public class OperacionesConMatricesTest {
         res[1][0] = new Complejo(1,0);
         res[1][1] = new Complejo(1,0);
         Complejo[][] respuesta = operacion.matrizAdjunta(lista) ;
-        assertEquals(respuesta,res);
+        Assert.assertArrayEquals(respuesta,res);
     }
     
     @Test
@@ -138,7 +139,7 @@ public class OperacionesConMatricesTest {
         lista[1][0] = new Complejo(1, 0);
         lista[1][1] = new Complejo(4, 2);
         lista[1][2] = new Complejo(0, 1);
-        lista[2][0] = new Complejo(4, -1);
+        lista[2][0] = new Complejo(4, -1);  
         lista[2][1] = new Complejo(0, 0);
         lista[2][2] = new Complejo(4, 0);
         listaDos[0] = new Complejo(7, 8);
@@ -148,7 +149,7 @@ public class OperacionesConMatricesTest {
         res[1] = new Complejo(41, 27);
         res[2] = new Complejo(40, 33);
         Complejo[] respuesta = operacion.accionMatrizSobreVector(lista, listaDos);
-        assertEquals(respuesta, res);
+        Assert.assertArrayEquals(respuesta, res);
     }
     
     @Test
@@ -239,7 +240,7 @@ public class OperacionesConMatricesTest {
         res[3][2] = new Complejo(1, 0);
         res[3][3] = new Complejo(1, 0);
         Complejo[][] respuesta = operacion.productoTensor(lista, listaDos);
-        assertEquals(respuesta, res);
+        Assert.assertArrayEquals(respuesta, res);
     }
     
 }
