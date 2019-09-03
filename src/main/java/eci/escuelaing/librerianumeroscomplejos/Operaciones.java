@@ -90,7 +90,7 @@ public class Operaciones {
      * @return Complejo 
      */
     public  Complejo conjugado(Complejo x){
-        return new Complejo(x.getNumeroA(),x.getNumeroB()* -1); 
+        return new Complejo(x.getNumeroA(),-x.getNumeroB()); 
     }
     /**
      * 

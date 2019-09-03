@@ -66,7 +66,7 @@ public class OperacionesConVectores extends ArrayList<Complejo> {
      * @param x Complejo
      * @return Complejo 
      */
-    public Complejo[] MultiplicacionEscalar (Complejo[] j,Complejo x){
+    public Complejo[] multiplicacionEscalar (Complejo[] j,Complejo x){
         Complejo[] respuesta = new Complejo[j.length];
         for (int i = 0; i < respuesta.length; i++){
            respuesta[i] = new Complejo(x.getNumeroA()*j[i].getNumeroA(),x.getNumeroB()*j[i].getNumeroB());

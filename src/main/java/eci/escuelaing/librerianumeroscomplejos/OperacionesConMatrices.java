@@ -78,7 +78,7 @@ public class OperacionesConMatrices {
     public Complejo[][] inversaDeMatriz(Complejo[][] x){
         Complejo [][] respuesta = new Complejo[x.length][x[0].length];
         for (int i=0;i<respuesta.length;i++){
-            for (int j=0;j<respuesta[i].length;i++){
+            for (int j=0;j<respuesta[i].length;j++){
                 respuesta[i][j]= new Complejo(x[i][j].getNumeroA()*-1,x[i][j].getNumeroB()*-1);
             }
         }
@@ -95,9 +95,9 @@ public class OperacionesConMatrices {
      */
     public Complejo[][] multiplicacionEscalarPorMatriz(Complejo[][] x,Complejo c){
         Complejo [][] respuesta = new Complejo[x.length][x[0].length];
-        for (int i=0;i<respuesta.length;i++){
-            for (int j=0;j<respuesta[i].length;i++){
-                respuesta[i][j] = new Complejo(c.getNumeroA()*x[i][0].getNumeroA(),c.getNumeroB()*x[0][j].getNumeroB());
+        for (int i=0;i<x.length;i++){
+            for (int j=0;j<x[0].length;j++){
+                respuesta[i][j] = operacion.producto(x[i][j], c);
             }
         }
         return respuesta;
@@ -111,12 +111,13 @@ public class OperacionesConMatrices {
      * @return Complejo 
      */
     public Complejo[][] matrizTranspuesta(Complejo[][] x){
+        Complejo [][] respuesta = new Complejo[x.length][x[0].length];
         for (int i=0;i<x.length;i++){
-            for (int j=0;j<x[i].length;i++){
-                x[i][j]=x[j][i];
+            for (int j=0;j<x[0].length;j++){
+                respuesta[i][j]=x[j][i];
             }
         }
-        return x;
+        return respuesta;
     }
     /**
      * 
@@ -129,8 +130,8 @@ public class OperacionesConMatrices {
     public Complejo[][] matrizConjugada(Complejo[][] x){
         Complejo [][] respuesta = new Complejo[x.length][x[0].length];
         for (int i=0;i<respuesta.length;i++){
-            for (int j=0;j<respuesta[i].length;i++){
-                respuesta[i][j]= new Complejo(x[i][j].getNumeroA(),x[i][j].getNumeroB()*-1);
+            for (int j=0;j<respuesta[0].length;j++){
+                respuesta[i][j]= operacion.conjugado(x[i][j]);
             }
         }
         return respuesta;

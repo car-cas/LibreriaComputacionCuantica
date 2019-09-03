@@ -101,10 +101,10 @@ public class OperacionesConMatricesTest {
         lista[0][1] =new Complejo(1,1);
         lista[1][0] = new Complejo(1,1);
         lista[1][1] = new Complejo(1,1);
-        esperado[0][0] = new Complejo(-1,-1);
-        esperado[0][1] = new Complejo(-1,-1);
-        esperado[1][0] = new Complejo(-1,-1);
-        esperado[1][1] = new Complejo(-1,-1);
+        esperado[0][0] = new Complejo(1,-1);
+        esperado[0][1] = new Complejo(1,-1);
+        esperado[1][0] = new Complejo(1,-1);
+        esperado[1][1] = new Complejo(1,-1);
         Complejo[][] respuesta = operacion.matrizConjugada(lista) ;
         assertEquals(respuesta,esperado);
     }

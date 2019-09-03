@@ -61,7 +61,7 @@ public class OperacionesConVectoresTest {
         lista[1] = new Complejo(4,1);
         respuesta[0] = new Complejo(28,9);
         respuesta[1] = new Complejo(16,3);
-        Complejo[] c = vector.MultiplicacionEscalar(lista, a);
+        Complejo[] c = vector.multiplicacionEscalar(lista, a);
         assertEquals(c,respuesta);
     }
 }
