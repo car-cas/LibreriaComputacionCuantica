@@ -41,7 +41,7 @@ La operación "**fase**" recibe una tuplas de numeros complejos y calcula su fas
 
 # Pruebas unitarias 
 
-* Se crearon 8 pruebas las cuales corresponden a cada uno de las operaciones de numeros complejos, estas pruebas se encuentras en la case **OperacionesTest**.
+* Se crearon 8 pruebas las cuales corresponden a cada uno de las operaciones de numeros complejos, estas pruebas se encuentras en la clase **OperacionesTest**.
 
 * Ejemplo:
 ```
@@ -100,7 +100,7 @@ La operación "**inversa**" calcula la inversa de un vector de numeros complejos
 
 ## 3. Multiplicación escalar de vectores complejos
 
-La operación "**inversa**" calcula la multipliacion escalar por un vector de numeros complejos y numero complejo.
+La operación "**multiplicacionEscalar**" calcula la multipliacion escalar por un vector de numeros complejos y numero complejo.
 
 ## 4. Adición de matrices complejos
 
@@ -127,11 +127,55 @@ La operación "**matrizConjugada**" calcula la conjugacion de una matriz.
 La operación "**matrizAdjunta**" calcula la matriz adjunta de una matriz de numeros complejos.
 
 ## 10. Función para calcular la "acción" de una matriz sobre un vector
+
+La operación "**accionMatrizSobreVector**" calcula la acción de una matriz sobre un vector.
+
 ## 11. Norma de matrices
+
+La operación "**normaMatrices**" calcula la nora de una matriz de numeros reales.
+
 ## 12. Distancia entrematrices
+
+La operación "**distanciaEntreMatrices**" calcula la distancia de dos matrices de reales.
+
 ## 13. Revisar si es unitaria
+
+La operación "**matrizUnitaria**" verifica que la matriz sea unitaria.
+
 ## 14. Revisar si es Hermitian
+
+La operación "**matrizHermitiana**" verifica que la matriz sea hermitiana.
+
 ## 15. Producto tensor
+
+La operación "**productoTensor**" calcula el producto tensor de dos matrices.
+
+# Pruebas unitarias para vectores y matrices
+
+* Se creo una prueba por cada metodo implementado en el laboratorio. Estas pruebas se encuentras en la clase **OperacionesConVectoresTest** y **OperacionesConMatricesTest**.
+
+* Ejemplo:
+
+```
+     @Test
+    public void adicionDeVectoresTest(){
+        
+            OperacionesConVectores vector = new OperacionesConVectores();
+            Complejo[] lista = new Complejo[2];
+            Complejo[] listaDos = new Complejo[2];
+            Complejo[] respuesta = new Complejo[2];
+            lista[0] = new Complejo(7,3);
+            lista[1] = new Complejo(4,1);
+            listaDos[0] = new Complejo(4,2);
+            listaDos[1] = new Complejo(3,2);
+            respuesta[0] = new Complejo(11,5);
+            respuesta[1] = new Complejo(7,3);
+            Complejo[] c = vector.adicion(lista, listaDos);
+            assertEquals(c,respuesta);
+            
+    }
+```
+
 
 # License
 This project is under the Apache license - see [LICENSE](LICENSE.txt) for more details.
