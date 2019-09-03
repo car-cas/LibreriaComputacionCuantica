@@ -72,7 +72,7 @@ public class OperacionesConVectores extends ArrayList<Complejo> {
            respuesta[i] = new Complejo(x.getNumeroA()*j[i].getNumeroA(),x.getNumeroB()*j[i].getNumeroB());
         }
         return respuesta;
-    } 
+    }
     
     @Override
     public boolean equals(Object obj) {
@@ -92,6 +92,13 @@ public class OperacionesConVectores extends ArrayList<Complejo> {
             }
         }
     	return b;
+    }
+    
+    @Override
+    public int hashCode(){
+        int hash=3;
+        hash = 57 * hash + (int) (Double.doubleToLongBits(this.vector.hashCode()) ^ (Double.doubleToLongBits(this.vector.hashCode()) >>> 32));
+        return hash;
     }
 }
     

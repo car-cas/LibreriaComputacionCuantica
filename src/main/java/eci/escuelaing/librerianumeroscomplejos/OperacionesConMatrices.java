@@ -28,7 +28,7 @@ public class OperacionesConMatrices {
     public Integer tamanio() {
         return matriz.length;
     }
-
+    
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -47,6 +47,13 @@ public class OperacionesConMatrices {
         }
         
         return true;
+    }
+    
+    @Override
+    public int hashCode(){
+        int hash=3;
+        hash = 57 * hash + (int) (Double.doubleToLongBits(this.matriz.hashCode()) ^ (Double.doubleToLongBits(this.matriz.hashCode()) >>> 32));
+        return hash;
     }
     
     /**
